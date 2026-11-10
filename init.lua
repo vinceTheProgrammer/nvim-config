@@ -178,6 +178,16 @@ vim.pack.add({
 
 vim.cmd.colorscheme('melange')
 
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    ['rust-analyzer'] = {
+      check = {
+        command = 'clippy',
+      },
+    },
+  },
+})
+
 vim.lsp.enable('rust_analyzer')
 
 require('fidget').setup({})
